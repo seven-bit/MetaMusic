@@ -28,7 +28,7 @@
 
 ## Testing Instructions
 
-[Base URL](https://meta-music01.herokuapp.com/) : The link hosted app.
+[https://meta-music01.herokuapp.com/](https://meta-music01.herokuapp.com/) : Base URL for hosted app.
 
 # APIs
 <ol>
