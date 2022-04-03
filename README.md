@@ -26,6 +26,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Tech Stack 
+### <ul><li>NestJS</li><li>MongoDB</li></ul>
+
 ## Testing Instructions
 #### Your can use POSTMAN to check the working, API Endpoints are given below
 
