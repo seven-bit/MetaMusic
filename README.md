@@ -26,6 +26,53 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Testing Instructions
+
+[Base URL](https://meta-music01.herokuapp.com/) : The link hosted app.
+
+# APIs
+<ol>
+  <li> <p><b>  /musics </b></p>
+    <ul>
+      <li>GET Req: Use it to get list of all musics present on DB
+      <li>POST Req: Use to add a music to the list with music object sent in body
+      <li>PATCH Req: Use it to update a music by sending id of music along with link i.e /musics/{id}
+      <li>DELETE Req: Use it to delete a music by sending id of music along with link i.e /musics/{id}
+    </ul>
+  <li><p><b> /sources </b></p>
+    <ul>
+      <li>GET Req: Use it to get list of all sources present on DB
+      <li>POST Req: Use to add a music to the list with source object sent in body
+      <li>PATCH Req: Use it to update a source by sending id of music along with link i.e /sources/{id}
+      <li>DELETE Req: Use it to delete a source by sending id of music along with link i.e /sources/{id}
+    </ul>
+</ol>
+
+
+#### A cron job runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
+
+### Data Types
+```javascript
+music  {
+    id: string
+    title: string
+    album: string
+    artist: string
+    year: number
+    metaData: [{
+        key: string,
+        value: string
+    }]
+}
+```
+
+```javascript
+sources  {
+    name: string
+    url: string
+}
+```
+
 ## Installation
 
 ```bash
