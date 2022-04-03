@@ -49,7 +49,29 @@
 </ol>
 
 
-#### A cron job which runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
+#### A cron job runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
+
+### Data Types
+```javascript
+music  {
+    id: string
+    title: string
+    album: string
+    artist: string
+    year: number
+    metaData: [{
+        key: string,
+        value: string
+    }]
+}
+```
+
+```javascript
+sources  {
+    name: string
+    url: string
+}
+```
 
 ## Installation
 
