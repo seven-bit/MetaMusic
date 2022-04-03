@@ -26,6 +26,20 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Testing Instructions
+
+[Base URL](https://meta-music01.herokuapp.com/) : The link hosted app.
+
+# APIs
+<ol>
+  <li> <b> /musics </b>
+    <ul>
+      <li>GET Req: Use it to get list of all musics present on DB
+      <li>POST Req: Use to add a music to the list with music object sent in body
+      <li>PATCH Req: Use it to update a music by sending id of music along with link i.e /music/{id}
+    </ul>
+</ol>
+
 ## Installation
 
 ```bash
