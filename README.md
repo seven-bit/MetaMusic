@@ -27,6 +27,7 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Testing Instructions
+#### Your can use POSTMAN to check the working, API Endpoints are given below
 
 [https://meta-music01.herokuapp.com/](https://meta-music01.herokuapp.com/) : Base URL for hosted app.
 
