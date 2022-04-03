@@ -58,7 +58,7 @@
 
 #### A cron job runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
 #### Cron job is set to run every 24 hour, to change that you can change the cron expression in the cron.service.ts file under 'musics' folder.
-#### Change it from '0 0 * * *' to '*/10 * * * * *' to run it every 10 second.
+#### Change it from '0 0 * * * ' to ' */10 * * * * * ' to run it every 10 second.
 
 ### Data Types
 ```javascript
