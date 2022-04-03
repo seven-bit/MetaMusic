@@ -24,7 +24,11 @@ export class SourcesController {
       sourceName,
       sourceUrl,
     );
-    return { id: generatedId };
+    if (generatedId == '400') {
+      return 'Source already exists';
+    } else {
+      return { id: generatedId };
+    }
   }
 
   //GET req to view all present sources details

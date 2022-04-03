@@ -9,16 +9,14 @@ import { CronService } from './cron.service';
 import { MusicSchema } from './music.model';
 import { SourceSchema } from '../sources/source.model';
 
-
 @Module({
-    imports: [
-      HttpModule,
-      MongooseModule.forFeature([{ name: 'Music', schema: MusicSchema }]),
-      MongooseModule.forFeature([{ name: 'Source', schema: SourceSchema }]),
-      ScheduleModule.forRoot(),
-    ],
-    controllers: [MusicsController],
-    providers: [MusicsService, CronService],
-  })
-
+  imports: [
+    HttpModule,
+    MongooseModule.forFeature([{ name: 'Music', schema: MusicSchema }]),
+    MongooseModule.forFeature([{ name: 'Source', schema: SourceSchema }]),
+    ScheduleModule.forRoot(),
+  ],
+  controllers: [MusicsController],
+  providers: [MusicsService, CronService],
+})
 export class MusicsModule {}

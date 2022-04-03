@@ -19,7 +19,7 @@ export class CronService {
 
   @Cron('0 0 * * *', { timeZone: 'UTC' }) //run everyday at 12:00 AM - Timezone UTC
   async updateMetaData() {
-    console.log('Called every day at 12:00 AM');
+    console.log(new Date().toUTCString());
 
     const musics = await this.musicModel.find().exec();
     const sources = await this.sourcecModel.find().exec();

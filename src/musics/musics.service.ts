@@ -19,7 +19,18 @@ export class MusicsService {
     year: number,
     metaData: [{ key: string; value: string }],
   ) {
-    console.log(title, album, artist, year, metaData);
+    let temp = await this.musicModel
+      .find({
+        title: title,
+        album: album,
+        artist: artist,
+        year: year,
+      })
+      .exec();
+
+    if (temp) {
+      return '400';
+    }
     const newMusic = new this.musicModel({
       title,
       album,
