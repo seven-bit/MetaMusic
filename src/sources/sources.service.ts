@@ -12,9 +12,9 @@ export class SourcesService {
 
   // function to add a new source
   async insertSource(name: string, url: string) {
-    let source = await this.sourceModel.find({name: name}).exec();
-    if(source){
-      return '400'
+    let source = await this.sourceModel.find({ name: name }).exec();
+    if (source) {
+      return '400';
     }
     const newSource = new this.sourceModel({
       name,

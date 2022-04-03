@@ -3,6 +3,6 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return ' visit here for details: https://github.com/seven-bit/MetaMusic';
+    return '<span><h1>Visit <a href = "https://github.com/seven-bit/MetaMusic#readme">README</a> for more details</h1> </span>';
   }
 }
