@@ -12,10 +12,11 @@ import { SourcesModule } from './sources/sources.module';
     MusicsModule,
     SourcesModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASS}@cluster0.hlr97.mongodb.net/MetaMusic?retryWrites=true&w=majority`),
+    MongooseModule.forRoot(
+      `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASS}@cluster0.hlr97.mongodb.net/MetaMusic?retryWrites=true&w=majority`,
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
-

@@ -47,9 +47,10 @@ export class CronService {
         const sourceURL = source.url;
 
         // check if source url is functional i.e returns status success: 200 or not
-        // const source_GET_status =  await (await firstValueFrom(this.httpService.get(sourceURL)));
         const exists = await this.urlVal(sourceURL);
+
         let source_GET_status = 404;
+
         if (exists) {
           source_GET_status = await (
             await firstValueFrom(this.httpService.get(sourceURL))
@@ -59,11 +60,12 @@ export class CronService {
           return;
         }
 
+        // If source url does not return status code 200 we don't fetch data from there
         if (!(source_GET_status === 200)) {
           return;
         }
 
-        console.log('passed');
+        // generate random string for mock metadata
         const randomString = this.randomStringGenerator(36);
         const mockedMetaData = {
           key: sourceName,
@@ -76,9 +78,8 @@ export class CronService {
     });
   }
 
+  // program to generate random strings
   randomStringGenerator(length: number) {
-    // program to generate random strings
-
     // declare all characters
     const characters =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -91,6 +92,7 @@ export class CronService {
     return result;
   }
 
+  // Function to check if the source URL is valid or not
   async urlVal(data) {
     try {
       const result = await urlExists(data);
