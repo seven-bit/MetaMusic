@@ -52,8 +52,13 @@
     </ul>
 </ol>
 
+#### To test any of the POST req send a JSON object of that particular type(music or source) in the body of POST request. Please refer to the data types mentioned below for reference.
+#### For reference there are already few objects present in the database, use GET requests to view them.
+
 
 #### A cron job runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
+#### Cron job is set to run every 24 hour, to change that you can change the cron expression in the cron.service.ts file under 'musics' folder.
+#### Change it from '0 0 * * *' to '*/10 * * * * *' to run it every 10 second.
 
 ### Data Types
 ```javascript
