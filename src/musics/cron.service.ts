@@ -17,7 +17,7 @@ export class CronService {
     @InjectModel('Source') private readonly sourcecModel: Model<Source>,
   ) {}
 
-  @Cron('0 0 * * *', { timeZone: 'UTC' }) //run everyday at 12:00 AM - Timezone UTC
+  @Cron('*/10 * * * * *', { timeZone: 'UTC' }) //run everyday at 12:00 AM - Timezone UTC
   async updateMetaData() {
     console.log(new Date().toUTCString());
 

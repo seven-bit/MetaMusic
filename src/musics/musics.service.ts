@@ -20,7 +20,7 @@ export class MusicsService {
     metaData: [{ key: string; value: string }],
   ) {
     let temp = await this.musicModel
-      .find({
+      .findOne({
         title: title,
         album: album,
         artist: artist,
