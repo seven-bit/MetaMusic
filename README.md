@@ -26,7 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Tech Stack 
+### <ul><li>NestJS</li><li>MongoDB</li></ul>
+
 ## Testing Instructions
+#### Your can use POSTMAN to check the working, API Endpoints are given below
 
 [https://meta-music01.herokuapp.com/](https://meta-music01.herokuapp.com/) : Base URL for hosted app.
 
@@ -48,8 +52,13 @@
     </ul>
 </ol>
 
+#### To test any of the POST req send a JSON object of that particular type(music or source) in the body of POST request. Please refer to the data types mentioned below for reference.
+#### For reference there are already few objects present in the database, use GET requests to view them.
+
 
 #### A cron job runs every 24hrs(12AM UTC) and fetches the metadata about a music object from various sources and updates it in DB.
+#### Cron job is set to run every 24 hour, to change that you can change the cron expression in the cron.service.ts file under 'musics' folder.
+#### Change it from '0 0 * * * ' to ' */10 * * * * * ' to run it every 10 second.
 
 ### Data Types
 ```javascript
@@ -92,18 +101,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
