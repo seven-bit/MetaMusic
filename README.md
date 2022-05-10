@@ -30,7 +30,7 @@
 ### <ul><li>NestJS</li><li>MongoDB</li></ul>
 
 ## Testing Instructions
-#### Your can use POSTMAN to check the working, API Endpoints are given below
+#### You can use POSTMAN to check the working, API Endpoints are given below
 
 [https://meta-music01.herokuapp.com/](https://meta-music01.herokuapp.com/) : Base URL for hosted app.
 
